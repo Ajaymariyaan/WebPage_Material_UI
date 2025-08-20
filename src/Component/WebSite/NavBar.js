@@ -1,9 +1,10 @@
-import { AppBar, Badge, Box, Toolbar, Typography, styled } from "@mui/material";
+import { AppBar, Badge, Box, IconButton, Toolbar, Typography, styled } from "@mui/material";
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-function NavBar() {
+import { Brightness1Outlined, Brightness2, Brightness2Sharp, Brightness2TwoTone, Brightness4, Brightness7, Brightness7Rounded } from "@mui/icons-material";
+function NavBar({ onToggleTheme, currentTheme }) {
     const StyledToolBar = styled(Toolbar)({
 
         display: 'flex',
@@ -31,6 +32,9 @@ function NavBar() {
                     <Badge badgeContent={4} color="secondary">
                         < NotificationsActiveIcon color="action" />
                     </Badge>
+                     <IconButton onClick={onToggleTheme} color="inherit">
+              {currentTheme === "dark" ? <Brightness7Rounded/> : <Brightness4 />}
+            </IconButton>
 
 
 

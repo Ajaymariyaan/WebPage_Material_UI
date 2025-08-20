@@ -81,7 +81,8 @@ Partial Prerendering: An advanced concept for optimizing initial load times.
 
 <Boxx/> */}
 
- <Container sx={{padding:'0px 0px',width:'100%',height:'100%'}}>
+ <Container maxWidth={false} sx={{ paddingLeft: 0,
+        paddingRight: 0,width:'100%',height:'100%'}}>
 <WebPage/>
 
 {/* <DatePickerSample2/> */}

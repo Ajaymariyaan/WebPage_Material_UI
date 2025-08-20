@@ -58,7 +58,7 @@ const itemData = [
 
        <>
       <Box flex={2} sx={{display:{xs:'none',sm:'block'}}}>
-        <Box position={"fixed"}>
+        <Box >
        <ImageList  cols={3} rowHeight={100}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
