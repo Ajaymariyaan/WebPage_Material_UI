@@ -6,10 +6,15 @@ import React from "react";
 import Typography from '@mui/material/Typography';
 import { Button, Container, styled, ThemeProvider}  from "@mui/material";
 import SendSharpIcon from '@mui/icons-material/SendSharp';
-import { Send} from "@mui/icons-material";
+import { Padding, Send} from "@mui/icons-material";
 import BtnTheme from "@/Component/BtnTheme";
 import GetTheme from "@/Component/GetTheme";
 import Boxx from "@/Component/Box";
+import WebPage from "./WebPage";
+// import Box from "@mui/material";
+import DatePickerSample2 from "@/Component/DatePickerSample2";
+// import DatePickerSample2 from "@/Component/DatePickerSample2";
+// import DatePickerSample from "@/Component/DatePickerSample";
 // import WebPage from "./WebPage";
 // import Boxx from "@mui/material";
 // import ThemeProvider from "@mui/material";
@@ -29,8 +34,9 @@ export default function Home() {
 
   // <Practice/>
   // </>
-    <Container>
-    
+  <>
+  {/* //  <Box> */}
+{/*     
     <Typography variant="h5" component='p' align="center" noWrap={true} sx={{backgroundColor:'teal',color:'yellowgreen'}}>
 
       Rendering:
@@ -73,9 +79,16 @@ Partial Prerendering: An advanced concept for optimizing initial load times.
 </div>
 
 
-<Boxx/>
-{/* <WebPage/> */}
+<Boxx/> */}
+
+ <Container sx={{padding:'0px 0px',width:'100%',height:'100%'}}>
+<WebPage/>
+
+{/* <DatePickerSample2/> */}
     </Container>
+    {/* </Box> */}
+
+    </>
 
   );
 }
