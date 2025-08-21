@@ -1,36 +1,78 @@
 import React from "react";
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import { Accessibility, Agriculture, AirplanemodeActive, Explore, Inbox, Info, Mic } from "@mui/icons-material";
+import { Accessibility, Agriculture, AirplanemodeActive, ContactPage, Explore, Home, HomeFilled, Inbox, Info, Mic, Warning } from "@mui/icons-material";
+import About from "../About/page";
+import Link from "next/link";
 
-function Menu1(){
 
+function Menu1() {
 
-    return(
+const ShowAlert=()=>{
+  alert("The Alert Button Click ")
+
+}
+  return (
 
     //    color='Yellowgreen' flex={1} backgroundColor='teal'
-       <Box flex={1} sx={{display:{sm:'none',xs:'none',lg:'block'}}} >
-        <Box position={"fixed"}>
-        
-  <List>
+    <Box flex={1} sx={{ display: { sm: 'none', xs: 'none', lg: 'block' } }} >
+      <Box position={"fixed"}>
+
+        <List>
+          <ListItem disablePadding >
+            <Link href={"/About"}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Home />
+                </ListItemIcon>
+                <ListItemText primary="About" />
+              </ListItemButton>
+            </Link>
+          </ListItem>
+
+
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton component="a" href="/About">
               <ListItemIcon>
-                <Inbox />
+                <HomeFilled />
               </ListItemIcon>
-              <ListItemText primary="Inbox" />
+              <ListItemText primary="About" />
             </ListItemButton>
           </ListItem>
 
-            <ListItem disablePadding>
+
+          <ListItem disablePadding >
+            <Link href={"/Contact"}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ContactPage />
+                </ListItemIcon>
+                <ListItemText primary="Contact" />
+              </ListItemButton>
+            </Link>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton onClick={ShowAlert}>
+              <ListItemIcon>
+                <Warning />
+              </ListItemIcon>
+              <ListItemText primary="Alert" />
+            </ListItemButton>
+          </ListItem>
+
+
+
+
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Accessibility/>
+                <Accessibility />
               </ListItemIcon>
               <ListItemText primary="Access" />
             </ListItemButton>
           </ListItem>
 
-            <ListItem disablePadding>
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <Explore />
@@ -39,7 +81,7 @@ function Menu1(){
             </ListItemButton>
           </ListItem>
 
-            <ListItem disablePadding>
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <AirplanemodeActive />
@@ -47,7 +89,7 @@ function Menu1(){
               <ListItemText primary="Inbox" />
             </ListItemButton>
           </ListItem>
-            <ListItem disablePadding>
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <Info />
@@ -56,7 +98,7 @@ function Menu1(){
             </ListItemButton>
           </ListItem>
 
-            <ListItem disablePadding>
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <Agriculture />
@@ -65,7 +107,7 @@ function Menu1(){
             </ListItemButton>
           </ListItem>
 
-            <ListItem disablePadding>
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <Mic />
@@ -74,13 +116,13 @@ function Menu1(){
             </ListItemButton>
           </ListItem>
 
-          </List>
-          </Box>
-       </Box>
-     
-       
-       
-    )
+        </List>
+      </Box>
+    </Box>
+
+
+
+  )
 }
 
 export default Menu1;

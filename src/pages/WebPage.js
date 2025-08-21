@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import { useState } from "react";
 
 import { Palette } from "@mui/icons-material";
+import Link from "next/link";
 
 // import { Rowing } from "@mui/icons-material";
 
@@ -48,8 +49,10 @@ const [theme,setTheme]=useState('light');
        </Stack>
        
        </Container>
-
+       <Link href={"/About"}> Go To About Page </Link>
+        <Link href={"/Contact"}>Go To The Contact</Link>
         </Box>
+
         </ThemeProvider>
        
     )

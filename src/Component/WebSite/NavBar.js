@@ -1,6 +1,9 @@
-import { AppBar, Badge, Box, IconButton, Toolbar, Typography, styled } from "@mui/material";
+import { AppBar, Badge, Box, Button, IconButton, Toolbar, Typography, styled } from "@mui/material";
 import React from "react";
 import Avatar from "@mui/material/Avatar";
+import Link from "next/link";
+
+// import Button from "@mui/material";
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import { Brightness1Outlined, Brightness2, Brightness2Sharp, Brightness2TwoTone, Brightness4, Brightness7, Brightness7Rounded } from "@mui/icons-material";
@@ -21,12 +24,18 @@ function NavBar({ onToggleTheme, currentTheme }) {
             <Box>
             <StyledToolBar>
 
-                <Typography variant='54'>Tours</Typography>
+                <Typography variant='54'><p>Tours</p>
+                
+                </Typography>
+                
                 <Box sx={{
                     display: 'flex', flexDirection: 'row', gap: '20px', justifyContent: 'center', alignItems: 'center'
                 }} >
+                    <Button variant="contained" color="secondary" href="/About">About</Button>
+                    <Button variant="contained" color="secondary" href="/Contact">Contact</Button>
+                    
                    
-                    <Badge badgeContent={4} color="secondary">
+                    <Badge badgeContent={100} max={99}  color="secondary" >
                         < MailIcon color="action" />
                     </Badge>
                     <Badge badgeContent={4} color="secondary">
