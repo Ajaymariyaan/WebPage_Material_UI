@@ -19,7 +19,7 @@ const ShowAlert=()=>{
 
         <List>
           <ListItem disablePadding >
-            <Link href={"/About"}>
+            <Link href="/About" passHref>
               <ListItemButton>
                 <ListItemIcon>
                   <Home />

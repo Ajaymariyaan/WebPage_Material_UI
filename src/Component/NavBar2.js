@@ -7,7 +7,7 @@ import Link from "next/link";
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import { Brightness1Outlined, Brightness2, Brightness2Sharp, Brightness2TwoTone, Brightness4, Brightness7, Brightness7Rounded } from "@mui/icons-material";
-function NavBar({ onToggleTheme, currentTheme }) {
+function NavBar2({ onToggleTheme, currentTheme }) {
     const StyledToolBar = styled(Toolbar)({
 
         display: 'flex',
@@ -20,9 +20,8 @@ function NavBar({ onToggleTheme, currentTheme }) {
 
     return (
 
-        <AppBar position={"sticky"} sx={{padding:'0px 0px', marginTop:'0px'}}>
+        <AppBar position={"sticky"} sx={{padding:'0px 0px', marginTop:'0px'}} color="Secondary">
             <Box>
-                <Box>
             <StyledToolBar>
 
                 <Typography variant='54'><p>Tours</p>
@@ -32,8 +31,10 @@ function NavBar({ onToggleTheme, currentTheme }) {
                 <Box sx={{
                     display: 'flex', flexDirection: 'row', gap: '20px', justifyContent: 'center', alignItems: 'center'
                 }} >
+                    <Button variant="contained" color="secondary" href="/blog/NestedSample">NestedPage</Button>
+                    <Button variant="contained" color="secondary" href="/Nest/Nested/Nested2Step">Two Step Folder</Button>
+                    
                    
-                
                     <Badge badgeContent={100} max={99}  color="secondary" >
                         < MailIcon color="action" />
                     </Badge>
@@ -54,18 +55,8 @@ function NavBar({ onToggleTheme, currentTheme }) {
                 </Box>
             </StyledToolBar>
             </Box>
-
-            <Box display={"flex"} flexDirection={"row"} justifyContent={"start"} gap={1}>
-                <Link href="/About" passHref> <Button variant="contained" color="secondary" >About</Button></Link>
-                <Link  href="/Contact"   passHref><Button variant="contained" color="secondary">Contact</Button></Link>
-                <Link href="/blog/NestedSample"   passHref><Button variant="contained" color="secondary" >Nested Page</Button></Link>
-                <Link href="/Nest/Nested/Nested2Step"   passHref><Button variant="contained" color="secondary" >Nested Folder</Button></Link>
-
-
-            </Box>
-            </Box>
         </AppBar>
     )
 }
 
-export default NavBar;
+export default NavBar2;

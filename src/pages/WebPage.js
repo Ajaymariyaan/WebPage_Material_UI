@@ -5,6 +5,7 @@ import { Container, createTheme, Stack, ThemeProvider } from "@mui/material";
 import Menu1 from "@/Component/WebSite/Menu";
 import React from "react";
 import NavBar from "@/Component/WebSite/NavBar";
+import NavBar2 from "@/Component/NavBar2";
 import Box from "@mui/material/Box";
 import { useState } from "react";
 
@@ -36,6 +37,7 @@ const [theme,setTheme]=useState('light');
          <Box bgcolor={"background.default"} color={"text.primary"}>
 
         <NavBar onToggleTheme={toggleTheme} currentTheme={theme} />
+        {/* <NavBar2/> */}
 
        <Container maxWidth={false} sx={{padding:'0px'}} >
        {/* <p>wqdbiqwyh</p> */}
