@@ -11,7 +11,7 @@ function TourCard() {
 
 
     return (
-        <>
+        <> 
             <Card>
                 <CardHeader
                     

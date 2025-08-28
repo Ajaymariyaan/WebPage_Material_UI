@@ -12,7 +12,7 @@ console.log("Dynamic Id",{id})
 
         <>
         <h1> You Opened the id : {id} </h1>
-        
+        {/* <h1>gubcwe8figwe</h1> */}
         </>
     )
 }

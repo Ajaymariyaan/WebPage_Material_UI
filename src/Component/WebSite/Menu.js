@@ -64,12 +64,14 @@ const ShowAlert=()=>{
 
 
           <ListItem disablePadding>
+             <Link href="/PartialRenderSample" passHref>
             <ListItemButton>
               <ListItemIcon>
                 <Accessibility />
               </ListItemIcon>
-              <ListItemText primary="Access" />
+              <ListItemText primary="Partial Ren" />
             </ListItemButton>
+            </Link>
           </ListItem>
 
           <ListItem disablePadding>
