@@ -60,10 +60,9 @@ import { Suspense, useState, useEffect } from 'react';
 
 function DynamicQuote() {
   const [quote, setQuote] = useState(null);
-  const [count, setCount] = useState(5); // number
+  const [count, setCount] = useState(5);
   const [running, setRunning] = useState(true);
 
-  // Load quote after 1 second
   useEffect(() => {
     const timer = setTimeout(() => {
       setQuote({
@@ -72,10 +71,8 @@ function DynamicQuote() {
       });
     }, 1000);
 
-    return () => clearTimeout(timer); // cleanup
+    return () => clearTimeout(timer); 
   }, []);
-
-  // Counter: multiply by 5 every 2 seconds
   useEffect(() => {
     if (!running) return;
 
@@ -83,7 +80,7 @@ function DynamicQuote() {
       setCount(prev => prev * 5);
     }, 500);
 
-    return () => clearInterval(interval); // cleanup to avoid errors
+    return () => clearInterval(interval); 
   }, [running]);
 
   if (!quote) return null;

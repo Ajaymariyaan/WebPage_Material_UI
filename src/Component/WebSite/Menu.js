@@ -7,10 +7,10 @@ import Link from "next/link";
 
 function Menu1() {
 
-const ShowAlert=()=>{
-  alert("The Alert Button Click ")
+  const ShowAlert = () => {
+    alert("The Alert Button Click ")
 
-}
+  }
   return (
 
     //    color='Yellowgreen' flex={1} backgroundColor='teal'
@@ -64,13 +64,13 @@ const ShowAlert=()=>{
 
 
           <ListItem disablePadding>
-             <Link href="/PartialRenderSample" passHref>
-            <ListItemButton>
-              <ListItemIcon>
-                <Accessibility />
-              </ListItemIcon>
-              <ListItemText primary="Partial Ren" />
-            </ListItemButton>
+            <Link href="/PartialRenderSample" passHref>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Accessibility />
+                </ListItemIcon>
+                <ListItemText primary="Partial Ren" />
+              </ListItemButton>
             </Link>
           </ListItem>
 
